@@ -6,7 +6,7 @@ ExpressJS rout config model for nodejs
 
 npm install https://github.com/derozgurg/node-expressroute-config --save
 
-**using**
+**usage**
 
     function webApiMiddleware(req, res, next) {
         if (typeof req.user == "undefined") {
