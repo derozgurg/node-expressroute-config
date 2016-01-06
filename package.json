@@ -1,5 +1,5 @@
 {
-  "name": "node-expressrouter",
+  "name": "express-routeconfig",
   "version": "1.0.0",
   "description": "ExpressJS route config model",
   "main": "index.js",
