@@ -36,10 +36,3 @@ npm install https://github.com/derozgurg/node-expressroute-config --save
     app.get("/api/point/inround/:roundId",webApiMiddleware,point.inRound);
     app.post("/api/point/save",webApiMiddleware,point.save);*/
 
-    
-    routeConfig.applyRouteConfig(app,apiRouteConfig);
-
-    /* insteadof
-    app.get("/api/calendar/customeritems",webApiMiddleware,calendar.customerList);
-    app.get("/api/point/inround/:roundId",webApiMiddleware,point.inRound);
-    app.post("/api/point/save",webApiMiddleware,point.save);*/
