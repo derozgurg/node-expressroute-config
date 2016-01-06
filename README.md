@@ -8,12 +8,15 @@ npm install https://github.com/derozgurg/node-expressroute-config --save
 
 **using**
 
+    var routeConfig = require("express-routeconfig")(app);
+
+
     function webApiMiddleware(req, res, next) {
         if (typeof req.user == "undefined") {
             res.setHeader('Content-Type', 'application/json; charset=utf-8');
             res.statusCode = 401;
            return res.end('{"succeed":false}');
-        } else {        
+        } else {
             next();
         }
     }
@@ -25,6 +28,14 @@ npm install https://github.com/derozgurg/node-expressroute-config --save
             {method:"post",path:"/api/point/save",controller:point.save}
         ]
     };
+
+    routeConfig.applyRouteConfig(apiRouteConfig,true)
+
+    /* insteadof
+    app.get("/api/calendar/customeritems",webApiMiddleware,calendar.customerList);
+    app.get("/api/point/inround/:roundId",webApiMiddleware,point.inRound);
+    app.post("/api/point/save",webApiMiddleware,point.save);*/
+
     
     routeConfig.applyRouteConfig(app,apiRouteConfig);
 
