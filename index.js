@@ -7,10 +7,8 @@ module.exports.applyRouteConfig = function (app,routConfig) {
         else if(route.method.toLowerCase() == "post"){
             app.post(route.path,routConfig.middleWare,route.controller);
         }
+        else if(route.method.toLowerCase() == "delete"){
+            app.delete(route.path,routConfig.middleWare,route.controller);
+        }
     }
 }
-
-
-
-
-
