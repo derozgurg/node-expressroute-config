@@ -6,7 +6,7 @@ ExpressJS rout config model for nodejs
 
 npm install https://github.com/derozgurg/node-expressroute-config --save
 
-**usage**
+**using**
 
     function webApiMiddleware(req, res, next) {
         if (typeof req.user == "undefined") {
@@ -28,5 +28,11 @@ npm install https://github.com/derozgurg/node-expressroute-config --save
             {method:"post",path:"/api/point/save",controller:point.save}
         ]
     };
-
+    
     routeConfig.applyRouteConfig(app,apiRouteConfig);
+
+
+    /* insteadof
+    app.get("/api/calendar/customeritems",calendar.customerList);
+    app.get("/api/point/inround/:roundId",point.inRound);
+    app.post("/api/point/save",point.save);*/
