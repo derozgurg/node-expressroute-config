@@ -1,4 +1,4 @@
-module.exports.applyRouteConfig = function (app,routConfig) {
+module.exports.applyRouteConfig = function (app,routConfig,disposeAfter) {
     for(var i = 0 ; i < routConfig.methods.length;i++){
         var route = routConfig.methods[i];
         if(route.method.toLowerCase() == "get"){
@@ -11,4 +11,7 @@ module.exports.applyRouteConfig = function (app,routConfig) {
             app.delete(route.path,routConfig.middleWare,route.controller);
         }
     }
+
+
+    if(disposeAfter) routConfig == null;
 }
