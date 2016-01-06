@@ -2,6 +2,9 @@
 
 ExpressJS rout config model for nodejs
 
-#install
+**install**
 
 npm install https://github.com/derozgurg/node-expressroute-config --save
+
+**using**
+
